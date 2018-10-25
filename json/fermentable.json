@@ -170,7 +170,7 @@
                           "$ref": "measureable_units.json#/definitions/TimeType"
                         },
                         "specific_gravity": {
-                          "$ref": "measureable_units.json#/definitions/DensityType"
+                          "$ref": "measureable_units.json#/definitions/DensityUnitType"
                         },
                         "pH": {
                           "$ref": "measureable_units.json#/definitions/AcidityType"
