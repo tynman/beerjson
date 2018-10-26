@@ -17,7 +17,7 @@ interface WaterBase {
     flouride?: ConcentrationType,
 }
 export type WaterContentTypes =  
-    "calcium" 
+      "calcium" 
     | "bicarbonate" 
     | "sulfate" 
     | "chloride" 

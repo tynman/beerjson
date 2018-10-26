@@ -81,7 +81,7 @@ export enum SpecificVolumeUnitType {
 /// UNDONE: "one" was originally "1". Will need to write converters
 export enum UnitUnitType {"one", "unit", "each", "dimensionless"}
 /// UNDONE: Technically DateType is a string 
-export class DateType extends String {}
+export interface DateType extends String {}
 export const DateTimeMatcher = RegExp("\\d{4}-\\d{2}-\\d{2}|\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}");
 
 export interface PercentType extends NumericTypeBase<PercentUnitType> {}
@@ -98,4 +98,4 @@ export enum QualitativeRangeType {
 }
 
 
-export class VersionType extends Number {}
+export interface VersionType extends Number {}
