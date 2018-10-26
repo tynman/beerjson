@@ -1,4 +1,5 @@
-import { PercentType } from "./measureable_units";
+import { PercentType, VolumeType, MassType } from "./measureable_units";
+import { AddToMash, AddToBoil, AddToFermentation } from "./fermentable";
 
 /// HopVarietyBase provides unique properties to identify individual records of a hop variety
 export interface HopVarietyBase {
@@ -44,3 +45,16 @@ export interface VarietyInformation extends HopVarietyBase {
         'xanthohumol': PercentType,
     }
 }
+
+/// HopAdditionType collects the attributes of each hop ingredient for use in a recipe hop bil
+export interface HopAdditionType extends HopVarietyBase {
+    /// The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step.
+    timing?: AddToMash | AddToBoil | AddToFermentation,
+    amount: VolumeType | MassType
+}
+
+export interface IBUEstimateType {
+    method: IBUMethodType
+}
+
+export type IBUMethodType = "Rager" | "Tinseth" | "Garetz" | "Other";

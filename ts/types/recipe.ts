@@ -1,5 +1,12 @@
 import { DateType, VolumeType, PercentType, GravityType, ColorType, AcidityType } from "./measureable_units";
 import { RecipeStyleType } from "./style";
+import { FermentableAdditionType } from "./fermentable";
+import { HopAdditionType, IBUEstimateType } from "./hop";
+import { MiscellaneousAdditionType } from "./misc";
+import { MashProcedureType } from "./mash";
+import { FermentationProcedureType } from "./fermentation";
+import { BoilProcedureType } from "./boil";
+import { PackagingProcedureType } from "./packaging";
 
 /// RecipeType composes the information stored in a beerjson recipe
 export interface RecipeType {
